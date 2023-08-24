@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root{
+    --primary-color:#047aed;
+    --secondry-color:#1c3fa8;
+    --dark-color:#002240;
+    --light-color:#f4f4f4;
+    --success-color:#5cb85c;
+    --error-color:#d9534f;
+
+
+
+
+    
+
+}
+
+* {
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+} 
+
+body{
+    font-family: 'Lato',sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+/* navbar */
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+h1,h2{
+   font-weight: 300;
+   line-height: 1.2;
+   margin: 10px 0;
+}
+
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+code, pre{
+    background-color: #333;
+    color: #ccc;
+    padding: 10px;
+}
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+
+
+/* navbar */
+
+.navbar{
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+    margin-bottom: 0%;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+
+.navbar a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: solid 2px #fff;
+    /* background-color: #047; */
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+}
+
+
+/* showcase */
+
+
+
+.showcase{
+    height: 500px;
+    background-color: var(--primary-color);
+    color: #fff ;
+}  
+.showcase h1{
+    font-size: 40px;
+}
+.showcase p{
+    margin: 20px 0;
+}
+.showcase .grid{
+    overflow: visible;
+    grid-template-columns: 50% 45%;
+    grid-gap: 30px;
+}
+
+
+.showcase-text{
+    animation: slideInFromLeft 1s ease-in;
+}
+
+
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 400px;
+    z-index: 100;
+    animation: slideInFromRight 1s ease-in;
+    /* padding-bottom: 100px; */
+}
+
+
+.showcase-form .form-control{
+    margin: 30px 0;
+}
+.showcase-form input[type='text'],
+.showcase-form input[type='email']{
+    border: 0;
+    border-bottom: 1px solid #b4becd;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+.showcase-form input:focus{
+    outline: none;
+}
+
+
+.showcase::before,
+.showcase::after{
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: 15px;
+    right: 0;
+    left: 0;
+    background:  #fff;
+    transform: skewY(-2.5deg);
+    -webkit-transform: skewY(-2.5deg);
+    -moz-transform: skewY(-2.5deg);
+    -ms-transform: skewY(-2.5deg);
+
+} 
+/* stats */
+.stats{
+    padding-top: 110px; 
+    animation: slideInFromBottom 1s ease-in;
+}
+
+.stats-heading{
+    max-width: 500px;
+    margin: 0 400px;
+}
+
+
+.stats .grid h3{
+    font-size: 35px;
+}
+
+.stats .grid p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* cli */
+
+
+.cli .grid{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 2fr 1fr;
+}
+
+.cli .grid *:first-child{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+
+/* cloud */
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+/* languages */
+
+
+
+
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+
+}
+.languages .card:hover{
+    transform: translateY(-15px);
+}
+
+.languages .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Features */
+ 
+.features-head img ,.docs-head img{
+    width: 200px;
+    justify-self: flex-end;
+
+}
+
+.features-sub-head img{
+    width: 300px;
+    justify-self: flex-end;
+}
+
+.features-main .grid {
+    padding: 30px;
+}
+.features-main .grid > *:first-child{
+    grid-column: 1 / span 3;
+}
+.features-main .grid > *:nth-child(2){
+    grid-column: 1 / span 2;
+}
+
+
+  /* Docs */
+
+  .docs-main h3{
+    margin: 20px 0;
+  }
+  .docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+  }
+
+  .docs-main nav li{
+    font-size: 1rem;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+  }
+  .docs-main nav li a{
+    color: #333;
+  }
+
+
+  .docs-main a:hover{
+    font-weight: bold;
+  }
+
+
+/* Footer */
+
+.footer .social a{
+    text-decoration: none;
+    color: #fff;
+    padding: 7px;
+}
+
+/* Animation */
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0 );
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0 );
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateX(0 );
+    }
+}
+
+
+/* tablet and under */
+@media(max-width:768px){
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .showcase{
+        height: auto;
+    }
+    .showcase-text{
+        text-align: center;
+        margin-top: 40px;
+        animation: slideInFromTop 1s ease-in;
+    }
+    .showcase-form{
+        justify-self: center;
+        margin: auto;
+        height: 300px;
+        animation: slideInFromBottom 1s ease-in;
+        
+    }
+    .cli .grid *:first-child{
+        grid-column: 1 ;
+        grid-row: 1 ;
+    }
+    .features-head,
+    .features-sub-head,
+    .docs-head{
+        text-align: center;
+    }
+    .features-main .grid > *:first-child,
+    .features-main .grid > *:nth-child(2),
+    .features-main .grid > *:nth-child(3),
+    .features-main .grid > *:nth-child(4),
+    .features-main .grid > *:nth-child(5),
+    .features-main .grid > *:nth-child(6){
+        grid-column:  1 /span 3;
+    }
+
+ 
+}
+
+
+/* mobile */
+
+@media (max-width:500px) {
+    .navbar{
+        height: 110px;
+    }
+    .navbar .flex{
+        flex-direction: column;
+    }
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1); 
+
+    }
+}
